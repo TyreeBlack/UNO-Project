@@ -1,0 +1,271 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.color_wheel {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background:conic-gradient(red, yellow, lime, white, cyan, blue, magenta, red);
+  border: 4px solid white;
+  box-shadow: 0 0 4px white, 0 0 4px white;
+  animation: spin 2s linear infinite;
+  animation: floaty 2.5s ease-in-out infinite;
+  position: relative;
+  bottom: -110px;
+  right: -340px;
+}
+
+@keyframes spin{
+  to { transform: rotate(360deg);
+  }
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+  }
+
+h3 {
+  font-size: 95px;
+  font-family:'Luckiest Guy', cursive;
+  font-weight: 900px;
+  letter-spacing: 2px;
+  color: gold;
+  line-height: 1;
+  -webkit-text-stroke: 2px white;
+  text-shadow:
+   -2px -2px 0 black,
+  2px 2px 0 #000,
+  3px 3px 0 black,
+  4px 4px 0 black,
+  5px 5px 0 black,
+  6px 6px 0 black,
+  7px 7px 0 black,
+  8px 8px 0 black,
+  9px 9px 0 black,
+  10px 10px 0 black,
+  11px 11px 0 black,
+  12px 12px 0 black;
+  position: relative;
+  top: -10px;
+}
+.rules_title {
+  color: gold;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 2px;
+}
+
+.ROE {
+  background-color: black;
+  box-shadow: 0 0 4px red, 0 0 4px blue;
+  width: 100%;
+  max-width: 500px;
+  height: 520px;
+  border-radius: 7px;
+  margin:auto 340px;
+}
+
+
+.username_header {
+  color: #fff;
+  position: relative;
+  bottom: -30px;
+}
+
+
+.list_of_engagements {
+  color: white;
+  font-size: 14px;
+  list-style-type: none;
+  text-align: left;
+  margin: auto 30px;
+}
+
+.check {
+  font-size: 25px;
+  color: green;
+  position: relative;
+  left: -20px;
+}
+
+.create-account {
+  background-color: red;
+  color: white;
+  width: 220px;
+  padding: 8px;
+  border-radius: 5px;
+  position: relative;
+  bottom: -90px;
+  cursor: pointer;
+}
+
+
+h2 {
+  font-size: 80px;
+  font-weight: bold;
+  color: yellow;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 2px white;
+  z-index: 1000;
+  text-shadow: 
+  -2px -2px 0 black,
+  2px 2px 0 #000,
+  3px 3px 0 black,
+  4px 4px 0 black,
+  5px 5px 0 black,
+  6px 6px 0 black,
+  7px 7px 0 black,
+  8px 8px 0 black,
+  9px 9px 0 black,
+  10px 10px 0 black,
+  11px 11px 0 black,
+  12px 12px 0 black;
+  transform: rotate(-52deg);
+  position: relative;
+  bottom: -130px;
+}
+
+.UNO {
+    font-size: 90px;
+  font-weight: bold;
+  color: yellow;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 2px white;
+  z-index: 1000;
+  text-shadow: 
+  -2px -2px 0 black,
+  2px 2px 0 #000,
+  3px 3px 0 black,
+  4px 4px 0 black,
+  5px 5px 0 black,
+  6px 6px 0 black,
+  7px 7px 0 black,
+  8px 8px 0 black,
+  9px 9px 0 black,
+  10px 10px 0 black,
+  11px 11px 0 black,
+  12px 12px 0 black;
+  transform: rotate(-60deg);
+  position: relative;
+
+}
+
+.UNO_Title3 {
+  font-size: 90px;
+  font-weight: bold;
+  color: yellow;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 2px white;
+  z-index: 1000;
+  text-shadow: 
+  -2px -2px 0 black,
+  2px 2px 0 #000,
+  3px 3px 0 black,
+  4px 4px 0 black,
+  5px 5px 0 black,
+  6px 6px 0 black,
+  7px 7px 0 black,
+  8px 8px 0 black,
+  9px 9px 0 black,
+  10px 10px 0 black,
+  11px 11px 0 black,
+  12px 12px 0 black;
+  transform: rotate(55deg);
+  position: relative;
+  bottom: -110px;
+  right: -5px;
+}
+
+.UNO_Card {
+  background-color: black;
+  box-shadow: 0 0 4px white, 0 0 2px white;
+  width: 320px;
+  height: 435px;
+  border: 4px solid white;
+  border-radius: 8px;
+  margin: auto 370px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  bottom: -40px;
+}
+
+
+.circle {
+  background-color: rgb(149, 15, 15);
+  box-shadow: 0 0 2px white, 0 0 2px white;
+  width: 495px;
+  height: 162px;
+  border: 4px solid white;
+  border-radius: 50%;
+ /* For rotating a shape */
+  transform: rotate(-56deg);
+  position: relative;
+  left: -90px;
+  bottom: -15px;
+}
+
+.UNO_Card2 {
+  background-color: black;
+  box-shadow: 0 0 4px white, 0 0 2px white;
+  width: 320px;
+  height: 420px;
+  border: 4px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  top: -320px;
+  right: -710px;
+  transform: rotate(19deg);
+  cursor: pointer;
+  z-index: 2;
+
+}
+
+.circle_2 {
+  background-color: rgb(149, 15, 15);
+  width: 522px;
+  height: 164px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  transform:rotate(-55deg);
+  position: relative;
+  top: -10px;
+  left: -104px;
+}
+
+
+.UNO_Card3 {
+  background-color: black;
+  box-shadow: 0 0 4px white, 0 0 2px white;
+  width: 320px;
+  height: 420px;
+  border: 4px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  top: -765px;
+  right: -50px;
+  transform: rotate(-20deg);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.circle_3 {
+  background-color: rgb(149, 15, 15);
+  width: 522px;
+  height: 168px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  transform:rotate(55deg);
+  position: relative;
+  top: -15px;
+  left: -99px;
+}
+
+

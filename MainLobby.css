@@ -1,0 +1,184 @@
+body {
+    background-color: moccasin;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 27px;
+    color: black;
+    white-space: nowrap;
+    text-shadow:
+    1px 1px 0 black;
+    cursor: pointer;
+}
+
+.player_limit {
+    color: white;
+    margin-top: -140px;
+    position: relative; 
+    right: -390px;
+}
+
+.sidebar_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    background-color: gold;
+    box-shadow: 0 0 4px white, 0 0 4px white;
+    padding-top: 70px;
+    border-radius: 18px 18px 0 0;
+    overflow: visible;
+    border: 2px solid white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+}
+
+.sidebar_tab {
+    display: flex;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffd34d;
+    border: 2px solid goldenrod;
+    border-bottom: 0;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.35);
+    position: absolute;
+}
+
+.tabname_divider {
+    color: white;
+    border: 2px solid white;
+}
+
+.create_item {
+    display: flex;
+    align-items: center;
+    text-shadow: 1px 1px 0 black;
+    gap: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.create_item:hover {
+    border-radius: 10px;
+    transform: translateX(6px);
+    transition: 0.2 ease;
+}
+
+.game_room {
+    background-color: gold;
+    box-shadow: 0 0 4px white, 0 0 8px white;
+    padding: 20px;
+    width: 1060px;
+    height: 620px;
+    border-radius: 8px;
+    margin: auto 320px;
+
+}
+
+.decrement_slot {
+    color: white;
+    font-size: 115px;
+    width: 190px;
+    margin-top: -30px;
+    cursor: pointer;
+}
+
+.increment_slot {
+     color: white;
+    font-size: 115px;
+    width: 190px;
+    margin-top: -30px;
+    cursor: pointer;
+}
+
+.increment_slot_3 {
+     color: white;
+    font-size: 115px;
+    width: 190px;
+    margin-top: -30px;
+    cursor: pointer;
+}
+
+.increment_slot_4 {
+     color: white;
+    font-size: 115px;
+    width: 190px;
+    margin-top: -30px;
+    cursor: pointer;
+}
+
+.decrement_slot:hover {
+    color: black;
+}
+
+.slot_container {
+    background-color: transparent;
+    box-shadow: 0 0 4px black, 0 0 4px black;
+    width: 220px;
+    height: 150px;
+    border-radius: 12px;
+    position: relative;
+    margin: auto 10px;
+    bottom: -124px;
+    cursor: pointer;
+}
+
+.slot_container_2 {
+    background-color: transparent;
+    box-shadow: 0 0 4px black, 0 0 4px black;
+    width: 220px;
+    height: 150px;
+    border-radius: 12px;
+    position: relative;
+    top: -22px;
+    margin: auto 270px;
+    cursor: pointer;
+}
+
+.slot_container_3 {
+    background-color: transparent;
+    box-shadow: 0 0 4px black, 0 0 4px black;
+    width: 220px;
+    height: 150px;
+    border-radius: 12px;
+    position: relative;
+    top: -170px;
+    margin: auto 520px;
+    cursor: pointer;
+}
+
+.slot_container_4 {
+    background-color: transparent;
+    box-shadow: 0 0 4px black, 0 0 4px black;
+    width: 220px;
+    height: 150px;
+    border-radius: 12px;
+    position: relative;
+    top: -320px;
+    margin: auto 780px;
+    cursor: pointer;
+}
+
+.readyup {
+    background-color: red;
+    font-size: 25px;
+    color: white;
+    width: 220px;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    top: -170px;
+    right: -320px;
+    cursor: pointer;
+}
