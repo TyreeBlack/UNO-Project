@@ -77,6 +77,15 @@ h3 {
   bottom: -30px;
 }
 
+.input_field {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  position: relative;
+  right: -10px;
+  bottom: -30px;
+}
+
 
 .list_of_engagements {
   color: white;

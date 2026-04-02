@@ -1,15 +1,55 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck} from "@fortawesome/free-solid-svg-icons";
+import { io } from 'socket.io-client';
 
 import './App.css'
 import MainLobby from "./MainLobby"; 
 
-function App() {
+const socket = io("http://localhost:3001"); // connects to the server.js file
+
+// listens for the connection event from the server side
+socket.on("connect", () => {
+  console.log("Connected:", socket.id);
+});
+
+function App() { 
   const [count, setCount] = useState(0)
 
   // establishing a screen state for static switching
   const [screen, setScreen] = useState("ROE");
+  
+  const[friends, SaveFriends] = useState([]);
+
+  const [username, setUserName] = useState(() => {
+    return localStorage.getItem("username") || "";  // stores the username in a presistence storage for data retentio
+  });
+
+
+  useEffect(() => {
+   if (username) {
+     // set the local storage as string data
+   localStorage.setItem("username", username);
+   }
+
+  }, [username]);
+
+
+  useEffect(() => {
+   if (username) {
+    setScreen("lobby");
+    RegisterID(username);
+
+
+  socket.emit("get_friends", username, (friendList) => {
+    SaveFriends(friendList);
+  });
+   }
+  }, []);
+
+  function RegisterID(username) {
+     socket.emit("register", username);
+  }
 
   return (
     <>
@@ -29,11 +69,9 @@ function App() {
         <li><FontAwesomeIcon icon={faCheck} className="check"></FontAwesomeIcon>UNO Penalty: When down to one card, you must press the button that will say "UNO!" If caught by another player before the next person begins their turn, you must draw 2 cards.</li>
         </ul>
         <label htmlFor="username" className="username_header">Enter username:</label>
-        <input type="text" className="input_field" id="username" name="username">
-        </input>
-        <button type="submit" className="create-account"
-        onClick={() => setScreen("lobby")}
-        >Create Account</button>
+        <input type="text" className="input_field" value={username} onChange={(e) => setUserName(e.target.value)}>
+        </input>      
+        <button type="submit" className="create-account" onClick={() => RegisterID(username)}>Create Account</button>
         </div>
          <div className="UNO_Card">
         <h2>UNO</h2>
@@ -52,7 +90,7 @@ function App() {
         </div>
     </>
     )}
-    {screen === "lobby" && <MainLobby />}
+    {screen === "lobby" && <MainLobby username={username}  socket={socket} friends={friends}/>}
     </>
   )
 }
